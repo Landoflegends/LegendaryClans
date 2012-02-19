@@ -35,17 +35,13 @@ import me.blackhawklex.legendaryclans.commands.CommandExecutor_Donations;
 import me.blackhawklex.legendaryclans.commands.CommandExecutor_Party;
 import org.bukkit.event.Event.Priority;
 import org.bukkit.event.Event.Type;
-import me.blackhawklex.legendaryclans.listeners.Listener_Block;
-import me.blackhawklex.legendaryclans.listeners.Listener_Player;
-import me.blackhawklex.legendaryclans.listeners.Listener_Entity;
-import me.blackhawklex.legendaryclans.listeners.Listener_Input;
-import me.blackhawklex.legendaryclans.listeners.Listener_NPC;
 import me.blackhawklex.legendaryclans.party.PartyManager;
 import me.znickq.spoutmaterials.SpoutMaterials;
 import net.citizensnpcs.api.CitizensManager;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
 import net.virtuallyabstract.minecraft.DungeonBuilder;
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -63,16 +59,6 @@ public class LegendaryClans extends JavaPlugin {
     private PluginDescriptionFile description;
 
     private String prefix;
-
-    private Listener_Block listenerBlock;
-
-    private Listener_Player listenerPlayer;
-
-    private Listener_Entity listenerEntity;
-
-    private InputListener listenerInput;
-
-    private Listener_NPC listenerNpc;
 
     private ClanManager clanManager;
 
@@ -124,14 +110,6 @@ public class LegendaryClans extends JavaPlugin {
 //        getConfig().options().copyDefaults(true);
 //        saveConfig();
         cfg = new Config(this);
-
-
-
-        listenerBlock = new Listener_Block(this);
-        listenerPlayer = new Listener_Player(this);
-        listenerEntity = new Listener_Entity(this);
-        listenerInput = new Listener_Input(this);
-        listenerNpc = new Listener_NPC(this);
 
         worldGuard = (WorldGuardPlugin) this.getServer().getPluginManager().getPlugin("WorldGuard");
         if (worldGuard == null) {
@@ -199,26 +177,8 @@ public class LegendaryClans extends JavaPlugin {
         clanManager = new ClanManager(this);
         donationManager = new DonationManager(this);
 
-        PluginManager pm = getServer().getPluginManager();
-
-        pm.registerEvent(Type.BLOCK_DAMAGE, listenerBlock, Priority.Normal, this);
-        pm.registerEvent(Type.BLOCK_PLACE, listenerBlock, Priority.Lowest, this);
-
-        pm.registerEvent(Type.CREATURE_SPAWN, listenerEntity, Priority.Normal, this);
-        pm.registerEvent(Type.ENTITY_DEATH, listenerEntity, Priority.Normal, this);
-
-
-        pm.registerEvent(Type.PLAYER_JOIN, listenerPlayer, Priority.Normal, this);
-        pm.registerEvent(Type.PLAYER_PICKUP_ITEM, listenerPlayer, Priority.Normal, this);
-        pm.registerEvent(Type.PLAYER_QUIT, listenerPlayer, Priority.Normal, this);
-        pm.registerEvent(Type.PLAYER_KICK, listenerPlayer, Priority.Normal, this);
-        pm.registerEvent(Type.PLAYER_CHAT, listenerPlayer, Priority.Normal, this);
-        pm.registerEvent(Type.PLAYER_INTERACT, listenerPlayer, Priority.Normal, this);
-        pm.registerEvent(Type.PLAYER_MOVE, listenerPlayer, Priority.Normal, this);
-
-        pm.registerEvent(Type.CUSTOM_EVENT, listenerInput, Priority.Normal, this);
-        pm.registerEvent(Type.CUSTOM_EVENT, listenerNpc, Priority.Normal, this);
-
+        //Register events
+        Bukkit.getPluginManager().registerEvents(new LegendaryListener(this), this);
 
         getCommand("clan").setExecutor(new CommandExecutor_Clan(this));
         getCommand("party").setExecutor(new CommandExecutor_Party(this));
