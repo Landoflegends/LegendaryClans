@@ -103,7 +103,7 @@ public class ClanManagementWindow {
                 super.onButtonClick(event);
 //                LegendaryPlayer legP = legPlugin.getPlayerManager().searchPlayerByName(splayerLeg.getName());
                 popupp.close();
-                if(clan.getLvl()<5){
+                if(clan.getLvl()<6){
                     ClanLevelUpScreen screeny = new ClanLevelUpScreen(legPlugin, splayerLeg, popupp, clan);
                 }
                 else{

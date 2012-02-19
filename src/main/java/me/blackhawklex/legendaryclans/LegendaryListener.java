@@ -44,11 +44,21 @@ import org.ss.shop.Shop;
 /**
  * The listener of all listeners.
  */
+
+
+
 public class LegendaryListener implements Listener {
     private static final String WATCHSTONE_PERM = "LegendaryClans.donator.watchstone";
 
     private final LegendaryClans plugin;
 
+    public static float Round(float Rval, int Rpl) {
+        float p = (float)Math.pow(10,Rpl);
+        Rval = Rval * p;
+        float tmp = Math.round(Rval);
+        return (float)tmp/p;
+    }
+    
     public LegendaryListener(LegendaryClans plugin) {
         this.plugin = plugin;
     }
@@ -158,16 +168,33 @@ public class LegendaryListener implements Listener {
             party = plugin.getPartyManager().getPartyByPlayer(killerLeg);
             // drop a random amount of souls (0-3) everytime u kill "something"
             Random random = new Random();
-            int amount = 0;
+            float amount = 0;
             amount = random.nextInt(3);
             //if player has party, give it a bit more, at max 5 souls + rest;
             if (party != null) {
                 amount = amount + (int) (party.getLevel() / 5);
             }
             amount = amount + 1;
+            
+            // Check if Player is a Clan Member     
+            Clan clan = plugin.getClanManager().getClanByPlayer(killerLeg);
+            if (clan != null) {
+                
+                float taxRate = (float) 0.1;
+                float clanSouls = Round(amount*taxRate,1);
+                float playerSouls = Round(amount - clanSouls,1);
+                
+                plugin.getiConomy().depositPlayer(killer.getName(), playerSouls);
+                LegendaryClans.coloredOutput((CommandSender) killer, "&b" + playerSouls + " soul(s) have been absorbed to the total souls of: " + plugin.getiConomy().getBalance(killer.getName()));
+                plugin.getiConomy().bankDeposit(clan.getName(), clanSouls);
+                LegendaryClans.coloredOutput((CommandSender) killer, "&b" + clanSouls + " soul(s) were absorbed by your clan: ");
+            }
+            else {
+                plugin.getiConomy().depositPlayer(killer.getName(), amount);
+                LegendaryClans.coloredOutput((CommandSender) killer, "&b" + amount + " soul(s) have been absorbed to the total souls of: " + plugin.getiConomy().getBalance(killer.getName()));
+            }
+            
             // Disabled CustomItem and added soul direct deposit.
-            plugin.getiConomy().depositPlayer(killer.getName(), amount);
-            LegendaryClans.coloredOutput((CommandSender) killer, "&b" + amount + " soul(s) have been absorbed to the total souls of: " + plugin.getiConomy().getBalance(killer.getName()));
             // CustomItem soulItem = plugin.getSpoutMaterials().itemManager.getItem("Soul").getCustomItem();
             // try {
             // SpoutItemStack stack = new SpoutItemStack(soulItem, amount + 1);

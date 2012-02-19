@@ -20,9 +20,9 @@ public class PartyManager {
 
     private List<Party> parties = new ArrayList<Party>();
 
-    private static final int[] requiredXpPerLevel = {50, 100, 200, 350, 500, 700, 950, 1250, 1500, 1750, 2000, 2250, 2600, 3000, 3500, 4000, 4500, 5000, 6000, 10000}; //20 level
+    private static final int[] requiredXpPerLevel = {50, 100, 200, 350, 500, 700, 950, 1250, 1500, 1750, 2000, 2250, 2600, 3000, 3500, 4000, 4500, 5000, 6000, 10000, 12500, 18000, 25000, 35000, 50000}; //25 level
 
-    private static final int maxLevel = 20;
+    private static final int maxLevel = 25;
 
     public PartyManager(LegendaryClans plugin) {
         this.plugin = plugin;
