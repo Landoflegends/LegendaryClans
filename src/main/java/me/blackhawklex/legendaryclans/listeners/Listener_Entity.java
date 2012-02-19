@@ -118,9 +118,10 @@ public class Listener_Entity extends EntityListener {
             if (party != null) {
                 amount = amount + (int) (party.getLevel() / 5);
             }
-
+                amount = amount + 1;
             // Disabled CustomItem and added soul direct deposit.
             plugin.getiConomy().depositPlayer(killer.getName(), amount);
+            LegendaryClans.coloredOutput((CommandSender) killer, "&b" + amount + " soul(s) have been absorbed to the total souls of: " + plugin.getiConomy().getBalance(killer.getName()));
             // CustomItem soulItem = plugin.getSpoutMaterials().itemManager.getItem("Soul").getCustomItem();
             // try {
             // SpoutItemStack stack = new SpoutItemStack(soulItem, amount + 1);

@@ -15,6 +15,8 @@ import me.blackhawklex.legendaryclans.clans.Clan;
 import net.citizensnpcs.api.event.NPCRightClickEvent;
 import net.citizensnpcs.resources.npclib.HumanNPC;
 import org.bukkit.Location;
+import org.bukkit.event.CustomEventListener;
+import org.bukkit.event.Event;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
@@ -30,16 +32,16 @@ import org.ss.shop.Shop;
  *
  * @author BlackHawkLex <me.BlackHawkLex at bondcraft.bplaced.org>
  */
-public class Listener_NPC implements Listener {
+public class Listener_NPC extends CustomEventListener implements Listener {
     private LegendaryClans plugin;
 
     public Listener_NPC(LegendaryClans plugin) {
         this.plugin = plugin;
     }
 
-    //   @Override
+    //@Override
     public void onNPCRightClick(NPCRightClickEvent event) {
-        //       super.onNPCRightClick(event);
+    //    super.onNPCRightClick(event);
         Player player = event.getPlayer();
         HumanNPC npc = event.getNPC();
         if (npc != null) {
