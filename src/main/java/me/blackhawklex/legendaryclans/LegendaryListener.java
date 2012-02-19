@@ -241,11 +241,14 @@ public class LegendaryListener implements Listener {
             party.regulateLevel(realExp);
         }
     }
-
+    
+    @EventHandler
     public void onNPCRightClick(NPCRightClickEvent event) {
         //    super.onNPCRightClick(event);
         Player player = event.getPlayer();
+        player.sendMessage("&4Clicky Clicky.");
         HumanNPC npc = event.getNPC();
+        
         if (npc != null) {
             LegendaryPlayer contacter = plugin.getPlayerManager().searchPlayerByName(player.getName());
             //is it the clan guardian and the contacter existing? 
