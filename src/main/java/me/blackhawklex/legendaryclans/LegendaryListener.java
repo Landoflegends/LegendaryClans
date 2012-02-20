@@ -9,6 +9,8 @@ import com.sk89q.worldguard.protection.managers.RegionManager;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
+import java.text.DecimalFormat;
+import java.math.BigDecimal;
 import me.blackhawklex.gui.*;
 import me.blackhawklex.legendaryclans.clans.Clan;
 import me.blackhawklex.legendaryclans.party.Party;
@@ -45,13 +47,13 @@ import org.ss.shop.Shop;
  * The listener of all listeners.
  */
 
-
-
 public class LegendaryListener implements Listener {
     private static final String WATCHSTONE_PERM = "LegendaryClans.donator.watchstone";
 
     private final LegendaryClans plugin;
 
+    
+    
     public static float Round(float Rval, int Rpl) {
         float p = (float)Math.pow(10,Rpl);
         Rval = Rval * p;
@@ -167,27 +169,49 @@ public class LegendaryListener implements Listener {
             LegendaryPlayer killerLeg = plugin.getPlayerManager().searchPlayerByName(killer.getName());
             party = plugin.getPartyManager().getPartyByPlayer(killerLeg);
             // drop a random amount of souls (0-3) everytime u kill "something"
-            Random random = new Random();
-            float amount = 0;
-            amount = random.nextInt(3);
-            //if player has party, give it a bit more, at max 5 souls + rest;
+            
+            
+            int amount = 0;
+            
+            //Get mob loot based on mob type.
+            amount = getSoulsByType(deadMob);
+            //If player is a party member, give +1 souls per 5 levels.
             if (party != null) {
                 amount = amount + (int) (party.getLevel() / 5);
             }
-            amount = amount + 1;
+            Random random = new Random();
             
+            //Check for double and triple drops (9% and 3% chance)
+            int doubleDrop = random.nextInt(100);
+                if (doubleDrop < 9) {
+                    if (doubleDrop < 3) {
+                        amount = amount * 3;
+                        LegendaryClans.coloredOutput((CommandSender) killer, "&4Triple Souls!");
+                        }
+                        else {
+                        amount = amount * 2;
+                        LegendaryClans.coloredOutput((CommandSender) killer, "&4Double Souls!");
+                        }
+                }
+                
+          
             // Check if Player is a Clan Member     
             Clan clan = plugin.getClanManager().getClanByPlayer(killerLeg);
             if (clan != null) {
                 
-                float taxRate = (float) 0.1;
-                float clanSouls = Round(amount*taxRate,1);
-                float playerSouls = Round(amount - clanSouls,1);
+                DecimalFormat df = new DecimalFormat("#.#");
+                double taxRate = 0.1;
+                BigDecimal clanSouls = new BigDecimal (df.format(amount * taxRate));
+                BigDecimal playerSouls = new BigDecimal (df.format(amount - (amount * taxRate)));
                 
-                plugin.getiConomy().depositPlayer(killer.getName(), playerSouls);
-                LegendaryClans.coloredOutput((CommandSender) killer, "&b" + playerSouls + " soul(s) have been absorbed to the total souls of: " + plugin.getiConomy().getBalance(killer.getName()));
-                plugin.getiConomy().bankDeposit(clan.getName(), clanSouls);
-                LegendaryClans.coloredOutput((CommandSender) killer, "&b" + clanSouls + " soul(s) were absorbed by your clan: ");
+                
+                plugin.getiConomy().depositPlayer(killer.getName(), playerSouls.doubleValue());
+                plugin.getiConomy().bankDeposit(clan.getName(), clanSouls.doubleValue());
+                BigDecimal finalTotal = new BigDecimal (df.format(plugin.getiConomy().getBalance(killer.getName())));
+                
+                
+                LegendaryClans.coloredOutput((CommandSender) killer, "&bYou absorbed " + playerSouls + " souls for a total of " + finalTotal);
+                LegendaryClans.coloredOutput((CommandSender) killer, "&b" + clanSouls + " souls were absorbed by your clan.");         
             }
             else {
                 plugin.getiConomy().depositPlayer(killer.getName(), amount);
@@ -206,7 +230,69 @@ public class LegendaryListener implements Listener {
 
 
     }
-
+    
+    public int getSoulsByType(Entity ent){
+        int SoulMin = 1;
+        int SoulMax = 2;
+        Random random = new Random();
+        if (ent instanceof Blaze) {
+            SoulMax = 10;
+            SoulMin = 6;
+        }
+        if (ent instanceof CaveSpider) {
+            SoulMax = 3;
+        }
+        if (ent instanceof Creeper) {
+            SoulMax = 3;
+        }
+        if (ent instanceof EnderDragon) {
+            SoulMax = 10000;
+            SoulMin = 5000;
+        }
+        if (ent instanceof Enderman) {
+            SoulMax = 5;
+            SoulMin = 3;
+        }
+        if (ent instanceof Ghast) {
+            SoulMax = 50;
+            SoulMin = 25;
+        }
+        if (ent instanceof Giant) {
+            SoulMax = 100;
+            SoulMin = 50;
+        }
+        if (ent instanceof MagmaCube) {
+            SoulMax = 10;
+            SoulMin = 2;
+        }
+        if (ent instanceof PigZombie) {
+            SoulMax = 5;
+            SoulMin = 2;
+        }
+        if (ent instanceof Skeleton) {
+            SoulMax = 4;
+            SoulMin = 2;
+        }
+        if (ent instanceof Slime) {
+            SoulMax = 2;
+        }
+        if (ent instanceof Spider) {
+            SoulMax = 3;
+        }
+        if (ent instanceof Wolf) {
+            SoulMax = 2;
+        }
+        if (ent instanceof Zombie) {
+            SoulMax = 4;
+            SoulMin = 2;
+        }
+        SoulMax = SoulMax + 1;
+        int SoulRange = SoulMax - SoulMin;
+        SoulMax = random.nextInt(SoulRange) + SoulMin;
+        
+        return SoulMax;
+    }
+    
     public void addExpByType(Entity ent, Party party, LegendaryPlayer killer) {
         int expMulti = -1;
         if (ent instanceof Blaze) {
