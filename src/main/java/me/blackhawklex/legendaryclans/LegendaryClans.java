@@ -49,7 +49,6 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.getspout.spoutapi.SpoutManager;
-import org.getspout.spoutapi.event.input.InputListener;
 import org.getspout.spoutapi.sound.SoundEffect;
 import org.ss.SpoutShopPlugin;
 
