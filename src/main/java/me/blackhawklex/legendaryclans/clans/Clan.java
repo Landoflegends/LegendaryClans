@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * LegendaryClans - by LandofLegend Custom Development Team
+ * http://www.landoflegend.net
  */
 package me.blackhawklex.legendaryclans.clans;
 
@@ -22,10 +22,6 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.getspout.spoutapi.SpoutManager;
 import org.getspout.spoutapi.player.SpoutPlayer;
 
-/**
- *
- * @author BlackHawkLex <me.BlackHawkLex at bondcraft.bplaced.org>
- */
 public class Clan {
     
     private String name;
@@ -35,10 +31,7 @@ public class Clan {
     private ClanTerr territory;
     private String clanFilePath;
     private LegendaryClans plugin;
-    private BlockVector innerClanBaseMid;
-    
-
-       
+    private BlockVector innerClanBaseMid;       
     private List <LegendaryPlayer> leaders = new ArrayList <LegendaryPlayer>();
     
     private List <LegendaryPlayer> members = new ArrayList<LegendaryPlayer>();

@@ -1,18 +1,13 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * LegendaryClans - by LandofLegend Custom Development Team
+ * http://www.landoflegend.net
  */
 package me.blackhawklex.legendaryclans.party;
-
 import me.blackhawklex.gui.NormalInvitationRequest;
 import me.blackhawklex.legendaryclans.LegendaryClans;
 import me.blackhawklex.legendaryclans.LegendaryPlayer;
 import org.bukkit.command.CommandSender;
 
-/**
- *
- * @author BlackHawkLex <me.BlackHawkLex at bondcraft.bplaced.org>
- */
 public class Invitation {
 
     private boolean pending = true;

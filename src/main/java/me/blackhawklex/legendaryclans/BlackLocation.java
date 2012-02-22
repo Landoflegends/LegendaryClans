@@ -1,16 +1,12 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * LegendaryClans - by LandofLegend Custom Development Team
+ * http://www.landoflegend.net
  */
 package me.blackhawklex.legendaryclans;
 
 import org.bukkit.Location;
 import org.bukkit.World;
 
-/**
- *
- * @author BlackHawkLex <me.BlackHawkLex at bondcraft.bplaced.org>
- */
 public class BlackLocation extends Location{
     
     private String name;
@@ -23,6 +19,4 @@ public class BlackLocation extends Location{
     public String getName() {
         return name;
     }
-    
-    
 }

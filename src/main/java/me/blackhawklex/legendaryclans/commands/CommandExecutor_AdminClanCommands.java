@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * LegendaryClans - by LandofLegend Custom Development Team
+ * http://www.landoflegend.net
  */
 package me.blackhawklex.legendaryclans.commands;
 
@@ -14,10 +14,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-/**
- *
- * @author BlackHawkLex <me.BlackHawkLex at bondcraft.bplaced.org>
- */
 public class CommandExecutor_AdminClanCommands implements CommandExecutor {
 
     private LegendaryClans plugin;

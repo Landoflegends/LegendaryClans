@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * LegendaryClans - by LandofLegend Custom Development Team
+ * http://www.landoflegend.net
  */
 package me.blackhawklex.donations;
 
@@ -10,10 +10,6 @@ import me.blackhawklex.legendaryclans.LegendaryPlayer;
 import org.bukkit.World;
 import org.bukkit.command.CommandSender;
 
-/**
- *
- * @author BlackHawkLex <me.BlackHawkLex at bondcraft.bplaced.org>
- */
 public class DonationManager {
     private  LegendaryClans plugin;
     private static final long dayMillis = 86400000;

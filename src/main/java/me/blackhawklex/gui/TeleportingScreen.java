@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * LegendaryClans - by LandofLegend Custom Development Team
+ * http://www.landoflegend.net
  */
 package me.blackhawklex.gui;
 
@@ -15,10 +15,6 @@ import org.getspout.spoutapi.gui.Orientation;
 import org.getspout.spoutapi.player.SpoutPlayer;
 import sun.awt.OrientableFlowLayout;
 
-/**
- *
- * @author BlackHawkLex <me.BlackHawkLex at bondcraft.bplaced.org>
- */
 public class TeleportingScreen {
     
     private LegendaryClans legPlugin;

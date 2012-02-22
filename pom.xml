@@ -4,7 +4,7 @@
 
     <groupId>net.landoflegends</groupId>
     <artifactId>legendaryclans</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.16.1</version>
     <packaging>jar</packaging>
 
     <name>LegendaryClans</name>
@@ -85,4 +85,11 @@
             <version>2.10</version>
         </dependency>
     </dependencies>
+    <description>Landoflegends.net
+Custom Clan Plugin
+
+Party System
+Clan System
+Mob Drop Calculations (iConomy)
+Server-specific world features.</description>
 </project>

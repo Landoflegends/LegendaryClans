@@ -1,36 +1,31 @@
 name: LegendaryClans
 main: me.blackhawklex.legendaryclans.LegendaryClans
-version: 1.0
-website: http://
-author: BlackHawkLex
+version: 0.16.1
+website: http://www.landoflegend.net
+author: [LandofLegend Custom Development Team, Dionnsai, BlackHawkLex ]
+description: LandofLegend Custom Clan/Party System, Server Functions, Mob Loot and Handling, More...
 
-
-description: >
-             See what we can work out.
 commands:
   clan:
     description: Basic clan function
     aliases: []
-    usage: |
-           /<command> 
+    usage: /<command> 
   party:
     description: basic party function
-    aliases: []
-    usage: |
-           /<command>
+    aliases: ['lparty','lp']
+    usage: /<command>
   aclan:
     description: admin clan commands
     aliases: []
-    usage: |
-    
+    usage: /<command>
   ch:
     description: basic chat commands
-    aliases: []
+    aliases: ['channel']
     usage: |
-    
   don:
     description: admin command for donation management
     aliases: []
     usage: |
+
 depend: [Spout,WorldGuard,iConomy,Vault,Citizens,SpoutShops,SpoutMaterials,LoginQueue2,DungeonBuilder]
 

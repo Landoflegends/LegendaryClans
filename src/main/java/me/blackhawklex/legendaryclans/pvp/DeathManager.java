@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * LegendaryClans - by LandofLegend Custom Development Team
+ * http://www.landoflegend.net
  */
 package me.blackhawklex.legendaryclans.pvp;
 
@@ -13,10 +13,6 @@ import me.blackhawklex.legendaryclans.clans.ClanManager;
 import me.blackhawklex.legendaryclans.clans.ClanTerr;
 import org.bukkit.Location;
 
-/**
- *
- * @author BlackHawkLex <me.BlackHawkLex at bondcraft.bplaced.org>
- */
 public class DeathManager {
     
     private LegendaryPlayer deadPlayer;

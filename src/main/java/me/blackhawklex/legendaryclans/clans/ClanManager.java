@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * LegendaryClans - by LandofLegend Custom Development Team
+ * http://www.landoflegend.net
  */
 package me.blackhawklex.legendaryclans.clans;
 
@@ -16,12 +16,6 @@ import me.blackhawklex.legendaryclans.party.PartyManager;
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 
-
-
-/**
- *
- * @author BlackHawkLex <me.BlackHawkLex at bondcraft.bplaced.org>
- */
 public class ClanManager {
     
     private LegendaryClans plugin;

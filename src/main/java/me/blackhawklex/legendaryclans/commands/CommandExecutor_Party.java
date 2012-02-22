@@ -1,8 +1,6 @@
 /*
- * LegendaryClans - by BlackHawkLex
- * http://
- *
- * powered by Kickstarter
+ * LegendaryClans - by LandofLegend Custom Development Team
+ * http://www.landoflegend.net
  */
 
 package me.blackhawklex.legendaryclans.commands;
@@ -14,7 +12,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
 import me.blackhawklex.legendaryclans.LegendaryClans;
 import me.blackhawklex.legendaryclans.LegendaryPlayer;
 import me.blackhawklex.legendaryclans.PlayerManager;

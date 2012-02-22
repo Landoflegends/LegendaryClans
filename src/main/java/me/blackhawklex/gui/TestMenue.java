@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * LegendaryClans - by LandofLegend Custom Development Team
+ * http://www.landoflegend.net
  */
 package me.blackhawklex.gui;
 
@@ -19,10 +19,6 @@ import org.getspout.spoutapi.player.SpoutPlayer;
 //import org.spoutcraft.spoutcraftapi.gui.GenericTexture;
 //import org.spoutcraft.spoutcraftapi.gui.WidgetAnchor;
 
-/**
- *
- * @author BlackHawkLex <me.BlackHawkLex at bondcraft.bplaced.org>
- */
 public class TestMenue {
         
     public static void open(Plugin plugin, SpoutPlayer splayer) { // method used to open the GUI for a player

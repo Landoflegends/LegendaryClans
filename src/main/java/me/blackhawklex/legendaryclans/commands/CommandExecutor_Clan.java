@@ -1,10 +1,7 @@
 /*
- * LegendaryClans - by BlackHawkLex
- * http://
- *
- * powered by Kickstarter
+ * LegendaryClans - by LandofLegend Custom Development Team
+ * http://www.landoflegend.net
  */
-
 package me.blackhawklex.legendaryclans.commands;
 
 

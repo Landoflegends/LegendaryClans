@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * LegendaryClans - by LandofLegend Custom Development Team
+ * http://www.landoflegend.net
  */
 package me.blackhawklex.legendaryclans;
 
@@ -359,9 +359,7 @@ public class LegendaryListener implements Listener {
     public void onNPCRightClick(NPCRightClickEvent event) {
         //    super.onNPCRightClick(event);
         Player player = event.getPlayer();
-        player.sendMessage("&4Clicky Clicky.");
-        HumanNPC npc = event.getNPC();
-        
+        HumanNPC npc = event.getNPC();     
         if (npc != null) {
             LegendaryPlayer contacter = plugin.getPlayerManager().searchPlayerByName(player.getName());
             //is it the clan guardian and the contacter existing? 
@@ -411,8 +409,6 @@ public class LegendaryListener implements Listener {
                 LegendaryClans.coloredOutput((CommandSender) player.getPlayer(), "&4This shop is not setup correctly, inform an admin!");
             }
         }
-
-
     }
 
     @EventHandler

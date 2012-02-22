@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package me.blackhawklex.gui;
 
 import me.blackhawklex.legendaryclans.LegendaryClans;
@@ -16,10 +12,6 @@ import org.getspout.spoutapi.gui.GenericPopup;
 import org.getspout.spoutapi.gui.ListWidgetItem;
 import org.getspout.spoutapi.player.SpoutPlayer;
 
-/**
- *
- * @author BlackHawkLex <me.BlackHawkLex at bondcraft.bplaced.org>
- */
 public class NoClanMenue {
     
     private LegendaryClans legPlugin;

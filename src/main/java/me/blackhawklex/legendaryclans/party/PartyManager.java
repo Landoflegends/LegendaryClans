@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * LegendaryClans - by LandofLegend Custom Development Team
+ * http://www.landoflegend.net
  */
 package me.blackhawklex.legendaryclans.party;
 
@@ -11,10 +11,6 @@ import me.blackhawklex.legendaryclans.LegendaryPlayer;
 import net.virtuallyabstract.minecraft.Dungeon;
 import net.virtuallyabstract.minecraft.DungeonBuilder;
 
-/**
- *
- * @author BlackHawkLex <me.BlackHawkLex at bondcraft.bplaced.org>
- */
 public class PartyManager {
     private LegendaryClans plugin;
 
