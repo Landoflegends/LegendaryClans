@@ -3,21 +3,21 @@
  * http://www.landoflegend.net
  */
 
-package me.blackhawklex.legendaryclans.commands;
+package net.landoflegend.legendaryclans.commands;
 
 
-import me.blackhawklex.gui.NoPartyMenue;
-import me.blackhawklex.gui.PartyMemberListMenue;
+import net.landoflegend.gui.NoPartyMenue;
+import net.landoflegend.gui.PartyMemberListMenue;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import me.blackhawklex.legendaryclans.LegendaryClans;
-import me.blackhawklex.legendaryclans.LegendaryPlayer;
-import me.blackhawklex.legendaryclans.PlayerManager;
-import me.blackhawklex.legendaryclans.party.Invitation;
-import me.blackhawklex.legendaryclans.party.Party;
-import me.blackhawklex.legendaryclans.party.PartyManager;
+import net.landoflegend.legendaryclans.LegendaryClans;
+import net.landoflegend.legendaryclans.LegendaryPlayer;
+import net.landoflegend.legendaryclans.PlayerManager;
+import net.landoflegend.legendaryclans.party.Invitation;
+import net.landoflegend.legendaryclans.party.Party;
+import net.landoflegend.legendaryclans.party.PartyManager;
 import org.getspout.spoutapi.SpoutManager;
 import org.getspout.spoutapi.player.SpoutPlayer;
 

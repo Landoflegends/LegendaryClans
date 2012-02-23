@@ -2,7 +2,7 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.gui;
+package net.landoflegend.gui;
 
 import org.getspout.spoutapi.gui.Button;
 import org.getspout.spoutapi.gui.GenericButton;

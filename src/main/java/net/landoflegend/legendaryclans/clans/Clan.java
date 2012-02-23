@@ -2,7 +2,7 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.legendaryclans.clans;
+package net.landoflegend.legendaryclans.clans;
 
 import com.sk89q.worldedit.BlockVector;
 import java.io.File;
@@ -13,8 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import me.blackhawklex.legendaryclans.LegendaryClans;
-import me.blackhawklex.legendaryclans.LegendaryPlayer;
+import net.landoflegend.legendaryclans.LegendaryClans;
+import net.landoflegend.legendaryclans.LegendaryPlayer;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.InvalidConfigurationException;

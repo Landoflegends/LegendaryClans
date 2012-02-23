@@ -2,11 +2,11 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.legendaryclans.party;
+package net.landoflegend.legendaryclans.party;
 
 import java.util.List;
-import me.blackhawklex.legendaryclans.LegendaryClans;
-import me.blackhawklex.legendaryclans.LegendaryPlayer;
+import net.landoflegend.legendaryclans.LegendaryClans;
+import net.landoflegend.legendaryclans.LegendaryPlayer;
 import net.virtuallyabstract.minecraft.DungeonBuilder;
 import net.virtuallyabstract.minecraft.DungeonParty;
 import org.bukkit.command.CommandSender;

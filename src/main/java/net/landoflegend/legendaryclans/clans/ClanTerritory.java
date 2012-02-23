@@ -2,7 +2,7 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.legendaryclans.clans;
+package net.landoflegend.legendaryclans.clans;
 
 //import com.sk89q.worldedit.Vector;
 import com.sk89q.worldedit.BlockVector;

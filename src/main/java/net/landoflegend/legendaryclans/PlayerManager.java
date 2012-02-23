@@ -2,15 +2,15 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.legendaryclans;
+package net.landoflegend.legendaryclans;
 
 import com.sk89q.worldedit.regions.Region;
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import me.blackhawklex.legendaryclans.clans.Clan;
-import me.blackhawklex.legendaryclans.clans.ClanTerr;
+import net.landoflegend.legendaryclans.clans.Clan;
+import net.landoflegend.legendaryclans.clans.ClanTerr;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 

@@ -2,7 +2,7 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.legendaryclans.clans;
+package net.landoflegend.legendaryclans.clans;
 
 import com.sk89q.worldedit.BlockVector;
 import com.sk89q.worldguard.domains.DefaultDomain;
@@ -12,8 +12,8 @@ import com.sk89q.worldguard.protection.regions.ProtectedRegion;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import me.blackhawklex.legendaryclans.LegendaryClans;
-import me.blackhawklex.legendaryclans.LegendaryPlayer;
+import net.landoflegend.legendaryclans.LegendaryClans;
+import net.landoflegend.legendaryclans.LegendaryPlayer;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.block.Block;

@@ -2,7 +2,7 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.legendaryclans;
+package net.landoflegend.legendaryclans;
 
 import org.bukkit.Location;
 import org.bukkit.World;

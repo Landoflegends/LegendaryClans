@@ -2,14 +2,14 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.gui;
+package net.landoflegend.gui;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
-import me.blackhawklex.legendaryclans.LegendaryClans;
-import me.blackhawklex.legendaryclans.LegendaryPlayer;
+import net.landoflegend.legendaryclans.LegendaryClans;
+import net.landoflegend.legendaryclans.LegendaryPlayer;
 import org.getspout.spoutapi.gui.GenericTexture;
 import org.getspout.spoutapi.gui.RenderPriority;
 import org.getspout.spoutapi.player.SpoutPlayer;

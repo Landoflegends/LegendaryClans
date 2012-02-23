@@ -2,12 +2,12 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.legendaryclans.commands;
+package net.landoflegend.legendaryclans.commands;
 
-import me.blackhawklex.legendaryclans.BlackLocation;
-import me.blackhawklex.legendaryclans.LegendaryClans;
-import me.blackhawklex.legendaryclans.LegendaryPlayer;
-import me.blackhawklex.legendaryclans.clans.Clan;
+import net.landoflegend.legendaryclans.BlackLocation;
+import net.landoflegend.legendaryclans.LegendaryClans;
+import net.landoflegend.legendaryclans.LegendaryPlayer;
+import net.landoflegend.legendaryclans.clans.Clan;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

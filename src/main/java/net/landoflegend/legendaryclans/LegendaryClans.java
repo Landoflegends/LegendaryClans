@@ -2,7 +2,7 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.legendaryclans;
+package net.landoflegend.legendaryclans;
 
 import com.raphfrk.bukkit.loginqueue2.LoginQueue;
 import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
@@ -23,17 +23,17 @@ import java.util.Random;
 import java.util.logging.Level;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.util.logging.Logger;
-import me.blackhawklex.donations.DonationManager;
-import me.blackhawklex.legendaryclans.clans.ClanManager;
-import me.blackhawklex.legendaryclans.commands.CommandExecutor_AdminClanCommands;
-import me.blackhawklex.legendaryclans.commands.CommandExecutor_Chat;
+import net.landoflegend.donations.DonationManager;
+import net.landoflegend.legendaryclans.clans.ClanManager;
+import net.landoflegend.legendaryclans.commands.CommandExecutor_AdminClanCommands;
+import net.landoflegend.legendaryclans.commands.CommandExecutor_Chat;
 import org.bukkit.plugin.PluginDescriptionFile;
-import me.blackhawklex.legendaryclans.commands.CommandExecutor_Clan;
-import me.blackhawklex.legendaryclans.commands.CommandExecutor_Donations;
-import me.blackhawklex.legendaryclans.commands.CommandExecutor_Party;
+import net.landoflegend.legendaryclans.commands.CommandExecutor_Clan;
+import net.landoflegend.legendaryclans.commands.CommandExecutor_Donations;
+import net.landoflegend.legendaryclans.commands.CommandExecutor_Party;
 import org.bukkit.event.Event.Priority;
 import org.bukkit.event.Event.Type;
-import me.blackhawklex.legendaryclans.party.PartyManager;
+import net.landoflegend.legendaryclans.party.PartyManager;
 import me.znickq.spoutmaterials.SpoutMaterials;
 import net.citizensnpcs.api.CitizensManager;
 import net.milkbowl.vault.economy.Economy;

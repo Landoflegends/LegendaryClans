@@ -2,23 +2,23 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.legendaryclans.commands;
+package net.landoflegend.legendaryclans.commands;
 
 
-import me.blackhawklex.gui.ClanInvitationRequest;
-import me.blackhawklex.gui.ExtraClanScreen;
-import me.blackhawklex.gui.NoClanMenue;
+import net.landoflegend.gui.ClanInvitationRequest;
+import net.landoflegend.gui.ExtraClanScreen;
+import net.landoflegend.gui.NoClanMenue;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.blackhawklex.legendaryclans.LegendaryClans;
-import me.blackhawklex.legendaryclans.LegendaryPlayer;
-import me.blackhawklex.legendaryclans.PlayerManager;
-import me.blackhawklex.legendaryclans.clans.Clan;
-import me.blackhawklex.legendaryclans.clans.ClanManager;
-import me.blackhawklex.legendaryclans.party.PartyManager;
+import net.landoflegend.legendaryclans.LegendaryClans;
+import net.landoflegend.legendaryclans.LegendaryPlayer;
+import net.landoflegend.legendaryclans.PlayerManager;
+import net.landoflegend.legendaryclans.clans.Clan;
+import net.landoflegend.legendaryclans.clans.ClanManager;
+import net.landoflegend.legendaryclans.party.PartyManager;
 import org.getspout.spoutapi.SpoutManager;
 import org.getspout.spoutapi.player.SpoutPlayer;
 

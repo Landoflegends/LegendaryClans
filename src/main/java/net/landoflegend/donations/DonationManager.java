@@ -2,11 +2,11 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.donations;
+package net.landoflegend.donations;
 
 import java.util.Calendar;
-import me.blackhawklex.legendaryclans.LegendaryClans;
-import me.blackhawklex.legendaryclans.LegendaryPlayer;
+import net.landoflegend.legendaryclans.LegendaryClans;
+import net.landoflegend.legendaryclans.LegendaryPlayer;
 import org.bukkit.World;
 import org.bukkit.command.CommandSender;
 

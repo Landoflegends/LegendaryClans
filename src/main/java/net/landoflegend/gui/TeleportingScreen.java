@@ -2,10 +2,10 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.gui;
+package net.landoflegend.gui;
 
 //import java.awt.Color;
-import me.blackhawklex.legendaryclans.LegendaryClans;
+import net.landoflegend.legendaryclans.LegendaryClans;
 import org.bukkit.plugin.Plugin;
 import org.getspout.spoutapi.gui.Color;
 import org.getspout.spoutapi.gui.GenericGradient;

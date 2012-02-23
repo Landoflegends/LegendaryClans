@@ -2,14 +2,14 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.gui;
+package net.landoflegend.gui;
 
 import java.util.ArrayList;
 import java.util.List;
-import me.blackhawklex.legendaryclans.LegendaryClans;
-import me.blackhawklex.legendaryclans.LegendaryPlayer;
-import me.blackhawklex.legendaryclans.party.Invitation;
-import me.blackhawklex.legendaryclans.party.Party;
+import net.landoflegend.legendaryclans.LegendaryClans;
+import net.landoflegend.legendaryclans.LegendaryPlayer;
+import net.landoflegend.legendaryclans.party.Invitation;
+import net.landoflegend.legendaryclans.party.Party;
 import org.bukkit.plugin.Plugin;
 import org.getspout.spoutapi.event.screen.ButtonClickEvent;
 import org.getspout.spoutapi.gui.GenericLabel;

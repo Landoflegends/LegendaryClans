@@ -2,7 +2,7 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.legendaryclans.clans;
+package net.landoflegend.legendaryclans.clans;
 
 import com.sk89q.worldedit.BlockVector;
 import java.io.File;
@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import me.blackhawklex.legendaryclans.LegendaryClans;
-import me.blackhawklex.legendaryclans.LegendaryPlayer;
-import me.blackhawklex.legendaryclans.party.PartyManager;
+import net.landoflegend.legendaryclans.LegendaryClans;
+import net.landoflegend.legendaryclans.LegendaryPlayer;
+import net.landoflegend.legendaryclans.party.PartyManager;
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 
@@ -211,7 +211,7 @@ public class ClanManager {
                 }
             }
             else{
-                LegendaryClans.coloredOutput((CommandSender)leader.getPlayer(), "&4You don´t have enough party members to found a clan. You need at least 4. Or you don´t have enough souls. You need at least 1000 souls.");
+                LegendaryClans.coloredOutput((CommandSender)leader.getPlayer(), "&4You don´t have enough party members to found a clan. You need at least 3. Or you don´t have enough souls. You need at least 1000 souls.");
             }
             
         }

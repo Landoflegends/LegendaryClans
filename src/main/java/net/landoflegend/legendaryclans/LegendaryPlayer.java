@@ -2,7 +2,7 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.legendaryclans;
+package net.landoflegend.legendaryclans;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,8 +10,8 @@ import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import me.blackhawklex.gui.TeleportationBar;
-import me.blackhawklex.legendaryclans.clans.Clan;
+import net.landoflegend.gui.TeleportationBar;
+import net.landoflegend.legendaryclans.clans.Clan;
 import net.citizensnpcs.api.CitizensManager;
 import net.citizensnpcs.resources.npclib.HumanNPC;
 import org.bukkit.Location;

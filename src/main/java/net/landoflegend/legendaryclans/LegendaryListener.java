@@ -2,8 +2,13 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.legendaryclans;
+package net.landoflegend.legendaryclans;
 
+import net.landoflegend.gui.TeleportationScreen;
+import net.landoflegend.gui.TeleportationBar;
+import net.landoflegend.gui.ClanGuardianMember;
+import net.landoflegend.gui.FoundAClan;
+import net.landoflegend.gui.ClanManagementWindow;
 import com.sk89q.worldedit.Vector;
 import com.sk89q.worldguard.protection.managers.RegionManager;
 import java.util.Calendar;
@@ -11,10 +16,9 @@ import java.util.List;
 import java.util.Random;
 import java.text.DecimalFormat;
 import java.math.BigDecimal;
-import me.blackhawklex.gui.*;
-import me.blackhawklex.legendaryclans.clans.Clan;
-import me.blackhawklex.legendaryclans.party.Party;
-import me.blackhawklex.legendaryclans.pvp.DeathManager;
+import net.landoflegend.legendaryclans.clans.Clan;
+import net.landoflegend.legendaryclans.party.Party;
+import net.landoflegend.legendaryclans.pvp.DeathManager;
 import net.citizensnpcs.api.event.NPCRightClickEvent;
 import net.citizensnpcs.resources.npclib.HumanNPC;
 import org.bukkit.Location;

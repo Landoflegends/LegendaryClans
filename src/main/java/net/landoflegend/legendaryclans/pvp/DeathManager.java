@@ -2,15 +2,15 @@
  * LegendaryClans - by LandofLegend Custom Development Team
  * http://www.landoflegend.net
  */
-package me.blackhawklex.legendaryclans.pvp;
+package net.landoflegend.legendaryclans.pvp;
 
 import com.sk89q.worldedit.Vector;
 import java.util.Random;
-import me.blackhawklex.legendaryclans.LegendaryClans;
-import me.blackhawklex.legendaryclans.LegendaryPlayer;
-import me.blackhawklex.legendaryclans.clans.Clan;
-import me.blackhawklex.legendaryclans.clans.ClanManager;
-import me.blackhawklex.legendaryclans.clans.ClanTerr;
+import net.landoflegend.legendaryclans.LegendaryClans;
+import net.landoflegend.legendaryclans.LegendaryPlayer;
+import net.landoflegend.legendaryclans.clans.Clan;
+import net.landoflegend.legendaryclans.clans.ClanManager;
+import net.landoflegend.legendaryclans.clans.ClanTerr;
 import org.bukkit.Location;
 
 public class DeathManager {
