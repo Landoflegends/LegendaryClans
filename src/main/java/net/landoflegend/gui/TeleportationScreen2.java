@@ -22,6 +22,20 @@ public class TeleportationScreen2 {
     private SpoutPlayer splayerLeg;
     private GenericListWidget locList;
 
+    static String replace(String str, String pattern, String replace) {
+        int s = 0;
+        int e = 0;
+        StringBuffer result = new StringBuffer();
+
+        while ((e = str.indexOf(pattern, s)) >= 0) {
+            result.append(str.substring(s, e));
+            result.append(replace);
+            s = e+pattern.length();
+        }
+    result.append(str.substring(s));
+    return result.toString();
+    }
+    
     public TeleportationScreen2(LegendaryClans legPlugin, SpoutPlayer splayer) {
         this.legPlugin = legPlugin;
         splayerLeg = splayer;
@@ -43,10 +57,19 @@ public class TeleportationScreen2 {
         locList = new GenericListWidget();
         
         for(BlackLocation loc: legPlugin.getCfg().getTeleportLocs()){
-            ListWidgetItem item = new ListWidgetItem(loc.getName(), LegendaryClans.parseColor("&9"+loc.getWorld().getName()));
-            locList.addItem(item);
+            String locName = loc.getName();
+            boolean b = locName.startsWith("DTP_");          
+            
+            if (b == true){
+                locName = replace(locName,"DTP_","");
+                ListWidgetItem item = new ListWidgetItem(locName, LegendaryClans.parseColor("&9"+loc.getWorld().getName()));
+                locList.addItem(item);
+            }
+            else{ 
+                
+            }
+                
         }
-        
         locList.setWidth(width/4);
         locList.setHeight(height - 20);
         

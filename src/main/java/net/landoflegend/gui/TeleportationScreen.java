@@ -43,8 +43,15 @@ public class TeleportationScreen {
         locList = new GenericListWidget();
         
         for(BlackLocation loc: legPlugin.getCfg().getTeleportLocs()){
-            ListWidgetItem item = new ListWidgetItem(loc.getName(), LegendaryClans.parseColor("&9"+loc.getWorld().getName()));
-            locList.addItem(item);
+            String locName = loc.getName();
+            boolean b = locName.startsWith("DTP_");
+            if (b == false){
+                ListWidgetItem item = new ListWidgetItem(loc.getName(), LegendaryClans.parseColor("&9"+loc.getWorld().getName()));
+                locList.addItem(item);
+            }
+            else{
+            
+            }
         }
         
         locList.setWidth(width/4);
