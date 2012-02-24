@@ -1,8 +1,8 @@
 name: LegendaryClans
-main: me.blackhawklex.legendaryclans.LegendaryClans
+main: net.landoflegend.legendaryclans.LegendaryClans
 version: 0.16.1
 website: http://www.landoflegend.net
-author: [LandofLegend Custom Development Team, Dionnsai, BlackHawkLex ]
+authors: [LandofLegend Custom Development Team, Dionnsai, BlackHawkLex ]
 description: LandofLegend Custom Clan/Party System, Server Functions, Mob Loot and Handling, More...
 
 commands:
@@ -26,6 +26,9 @@ commands:
     description: admin command for donation management
     aliases: []
     usage: |
-
+  tel:
+    description: admin command for teleport locations
+    aliases: []
+    usage: |
 depend: [Spout,WorldGuard,iConomy,Vault,Citizens,SpoutShops,SpoutMaterials,LoginQueue2,DungeonBuilder]
 

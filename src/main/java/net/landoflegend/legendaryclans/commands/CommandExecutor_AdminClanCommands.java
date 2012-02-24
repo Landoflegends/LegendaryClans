@@ -55,7 +55,7 @@ public class CommandExecutor_AdminClanCommands implements CommandExecutor {
             plugin.getCfg().addTelLoc(loc);
             LegendaryClans.coloredOutput(sender, "&2Added teleport location "+loc.getName()+" to world "+loc.getWorld().getName()+ " correctly!");
         }
-    }
+    }    
     
     public void addAllPlayersToSacrificationZone(CommandSender sender){
         for(LegendaryPlayer player:plugin.getPlayerManager().getPlayers()){

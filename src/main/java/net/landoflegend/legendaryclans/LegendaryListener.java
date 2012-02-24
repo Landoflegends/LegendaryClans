@@ -5,6 +5,7 @@
 package net.landoflegend.legendaryclans;
 
 import net.landoflegend.gui.TeleportationScreen;
+import net.landoflegend.gui.TeleportationScreen2;
 import net.landoflegend.gui.TeleportationBar;
 import net.landoflegend.gui.ClanGuardianMember;
 import net.landoflegend.gui.FoundAClan;
@@ -56,8 +57,6 @@ public class LegendaryListener implements Listener {
 
     private final LegendaryClans plugin;
 
-    
-    
     public static float Round(float Rval, int Rpl) {
         float p = (float)Math.pow(10,Rpl);
         Rval = Rval * p;
@@ -388,6 +387,9 @@ public class LegendaryListener implements Listener {
             } else if (npc.getName().contains("Captain")) {
                 SpoutPlayer playerS = SpoutManager.getPlayer(contacter.getPlayer());
                 TeleportationScreen telScreen = new TeleportationScreen(plugin, playerS);
+            } else if (npc.getName().contains("Admiral")){
+                SpoutPlayer playerS = SpoutManager.getPlayer(contacter.getPlayer());
+                TeleportationScreen2 telScreen = new TeleportationScreen2(plugin, playerS);
             }
         }
     }
